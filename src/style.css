@@ -15,6 +15,7 @@
 .header {
   justify-content: space-around;
   align-items: flex-end;
+  border-bottom: black 3px solid;
 }
 
 .logo {
