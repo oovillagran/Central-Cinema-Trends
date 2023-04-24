@@ -1,7 +1,22 @@
-.hello {
-  color: red;
+*{
+  margin: 0;
+  padding: 0;
 }
 
-body {
-  background-color: bisque;
+.logo-img{
+  width: 15%;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.header {
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.logo {
+  align-items: flex-end;
 }
