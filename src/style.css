@@ -20,3 +20,26 @@
 .logo {
   align-items: flex-end;
 }
+
+html {
+  position: relative;
+  min-height: 100%;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin-bottom: 50px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #f0f0f0;
+  border-top: black 3px solid;
+  padding: 7px;
+  margin: 0;
+}
