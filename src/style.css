@@ -67,3 +67,30 @@ footer {
   margin-bottom: 0.5rem;
   border-radius: 1rem;
 }
+
+.pages {
+  /* position: fixed; */
+  bottom: 5rem;
+  background: #100a1f;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.pages button {
+  cursor: pointer;
+  border: none;
+  /* align-items: center;
+  justify-content: center; */
+  height: 2rem;
+  width: 10rem;
+  background: #665299;
+  color: #fff;
+  border-radius: 7rem;
+  transition: 0.3s ease all;
+}
+
+.pages button:hover {
+  background: #1a137c;
+}
