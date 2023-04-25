@@ -1,5 +1,6 @@
 import { addComment } from './addComment.js';
 import { showComments } from './showComments.js';
+import { updateCommentCount } from './updateCommentCount.js';
 
 export const displayMovieDetails = (movieId) => {
   const appId = 'QQjOshxTvisitjLIZJus';
@@ -25,7 +26,7 @@ export const displayMovieDetails = (movieId) => {
             <div class="comments-section">
               <h3 class="comments_header">Comments:</h3>
               <ul class="comments-list"></ul>
-              <h3 class="add_comment_header">Add a Comment</h3>
+              <h3>Comments <span class="comment-count">(0)</span>:</h3>
               <form class="comment-form">
                 <input type="text" id="username-input" name="username" placeholder="Your name">
                 <textarea id="comment-input" name="comment" placeholder="Your insights"></textarea>
@@ -35,11 +36,13 @@ export const displayMovieDetails = (movieId) => {
           </div>
         `;
       document.body.insertAdjacentHTML('beforeend', popup);
+      const commentCountElement = document.querySelector('.popup .comment-count');
       const closeButton = document.querySelector('.popup .close-button');
       closeButton.addEventListener('click', () => {
         overlay.remove();
         document.querySelector('.popup').remove();
       });
+      updateCommentCount(appId, movieId);
       const addButton = document.querySelector('.comment-form button[type="submit"]');
       addButton.addEventListener('click', (event) => {
         event.preventDefault();
