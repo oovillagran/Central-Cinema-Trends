@@ -23,6 +23,7 @@ const loadMovies = async () => {
   } catch (error) {
     return error;
   }
+  return;
 };
 
 const previousButton = document.getElementById('previous');
