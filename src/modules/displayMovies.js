@@ -1,4 +1,5 @@
 import { addComment } from './addComment.js';
+import { showComments } from './showComments.js';
 
 export const displayMovieDetails = (movieId) => {
   const appId = 'QQjOshxTvisitjLIZJus';
@@ -61,6 +62,7 @@ export const displayMovieDetails = (movieId) => {
           commentInput.value = '';
         }
       });
+      showComments(appId, data.id);
     })
     .catch((error) => {
       console.error(error);
