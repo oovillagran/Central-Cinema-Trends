@@ -7,6 +7,7 @@ const loadMovies = () => new Promise((resolve, reject) => {
       if (response.status === 200) {
         return response.json();
       }
+      return reject(new Error('Movie can\'t load.'));
     })
     .then((data) => {
       let movies = '';
