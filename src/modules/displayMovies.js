@@ -1,5 +1,5 @@
 import { addComment } from './addComment.js';
-import { showComments} from './showComments.js'
+import { showComments } from './showComments.js';
 
 export const displayMovieDetails = (movieId) => {
   const appId = 'QQjOshxTvisitjLIZJus';
