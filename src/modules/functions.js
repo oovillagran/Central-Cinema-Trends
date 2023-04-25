@@ -1,14 +1,14 @@
 let page = 1;
 
-const loadMovies = async () => {
+const loadMovies = () => {
   return new Promise(async (resolve, reject) => {
     try {
       const response = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=f1d1819ff16bbb7177fc5279dc3acaef&page=${page}`);
-  
+
       // if response is ok
       if (response.status === 200) {
         const data = await response.json();
-  
+
         let movies = '';
         data.results.forEach((movie) => {
           movies += `
@@ -18,7 +18,7 @@ const loadMovies = async () => {
             </div>
           `;
         });
-  
+
         document.getElementById('movies-page').innerHTML = movies;
         resolve();
       }
