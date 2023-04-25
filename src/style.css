@@ -162,3 +162,8 @@ footer {
 .popup button.close-button:hover {
   color: #f00;
 }
+
+.like {
+  color: red;
+  font-size: 1.5rem;
+}
