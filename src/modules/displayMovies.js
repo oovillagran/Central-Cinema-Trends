@@ -36,7 +36,6 @@ export const displayMovieDetails = (movieId) => {
           </div>
         `;
       document.body.insertAdjacentHTML('beforeend', popup);
-      const commentCountElement = document.querySelector('.popup .comment-count');
       const closeButton = document.querySelector('.popup .close-button');
       closeButton.addEventListener('click', () => {
         overlay.remove();
