@@ -1,4 +1,8 @@
+import { addComment } from './addComment.js';
+
 export const displayMovieDetails = (movieId) => {
+  const appId = 'QQjOshxTvisitjLIZJus';
+  const itemId = movieId;
   const overlay = document.createElement('div');
   overlay.classList.add('popup-overlay');
   document.body.appendChild(overlay);
@@ -17,6 +21,16 @@ export const displayMovieDetails = (movieId) => {
             <img src="https://image.tmdb.org/t/p/w500/${data.poster_path}">
             <p>${data.overview}</p>
             <p>Release date: ${data.release_date}</p>
+            <div class="comments-section">
+              <h3 class="comments_header">Comments:</h3>
+              <ul class="comments-list"></ul>
+              <h3 class="add_comment_header">Add a Comment</h3>
+              <form class="comment-form">
+                <input type="text" id="username-input" name="username" placeholder="Your name">
+                <textarea id="comment-input" name="comment" placeholder="Your insights"></textarea>
+                <button type="submit">Comment</button>
+              </form>
+            </div>
           </div>
         `;
       document.body.insertAdjacentHTML('beforeend', popup);
@@ -24,6 +38,28 @@ export const displayMovieDetails = (movieId) => {
       closeButton.addEventListener('click', () => {
         overlay.remove();
         document.querySelector('.popup').remove();
+      });
+      const addButton = document.querySelector('.comment-form button[type="submit"]');
+      addButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        const usernameInput = document.querySelector('#username-input');
+        const commentInput = document.querySelector('#comment-input');
+        const username = usernameInput.value.trim();
+        const comment = commentInput.value.trim();
+        const date = new Date();
+        const currentDay = String(date.getDate()).padStart(2, '0');
+        const currentMonth = String(date.getMonth() + 1).padStart(2, '0');
+        const currentYear = date.getFullYear();
+        const currentDate = `${currentYear}-${currentMonth}-${currentDay}`;
+
+        if (username && comment) {
+          addComment(appId, itemId, username, comment);
+          const commentsList = document.querySelector('.comments-list');
+          const commentItem = `<li><small>${currentDate} - ${username}:</small> <strong>${comment}</strong></li>`;
+          commentsList.insertAdjacentHTML('beforeend', commentItem);
+          usernameInput.value = '';
+          commentInput.value = '';
+        }
       });
     })
     .catch((error) => {
