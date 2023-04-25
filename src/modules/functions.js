@@ -10,11 +10,15 @@ const loadMovies = async() => {
       
       let movies = '';
       data.results.forEach(movie => {
-        movies += `<h1>${movie.title}</h1>`;
-        
+        movies += `
+          <div class="movie">
+              <img class="poster" src="https://image.tmdb.org/t/p/w500/${movie.poster_path}">    
+              <h4 class="title">${movie.title}</h4>
+          </div>
+        `
       });
 
-      document.getElementById('movies').innerHTML = movies;
+      document.getElementById('movies-page').innerHTML = movies;
 
     } else if(response.status === 401){
       console.log('wrong key');
