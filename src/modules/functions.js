@@ -1,9 +1,27 @@
+let page = 1;
+
+const previousButton = document.getElementById('previous');
+const nextButton = document.getElementById('next');
+
+nextButton.addEventListener('click', () => {
+  if(page < 3){
+    page += 1;
+    loadMovies();
+  }
+});
+
+previousButton.addEventListener('click', () => {
+  if(page > 1){
+    page -= 1;
+    loadMovies();
+  } 
+});
+
+
 const loadMovies = async() => {
   try {
-    const response = await fetch('https://api.themoviedb.org/3/movie/popular?api_key=f1d1819ff16bbb7177fc5279dc3acaef');
+    const response = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=f1d1819ff16bbb7177fc5279dc3acaef&page=${page}`);
   
-    console.log(response);
-
     // if response is ok
     if(response.status === 200) {
       const data = await response.json();
@@ -20,12 +38,8 @@ const loadMovies = async() => {
 
       document.getElementById('movies-page').innerHTML = movies;
 
-    } else if(response.status === 401){
-      console.log('wrong key');
-    } else if(response.status === 404){
-      console.log('The movie doesn\'t exist.')
     } else {
-      console.log('error')
+      return;
     }
 
   } catch(error) {
