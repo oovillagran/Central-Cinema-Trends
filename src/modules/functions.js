@@ -19,8 +19,6 @@ const loadMovies = async () => {
       });
 
       document.getElementById('movies-page').innerHTML = movies;
-    } else {
-      return;
     }
   } catch (error) {
     return error;
@@ -43,6 +41,5 @@ previousButton.addEventListener('click', () => {
     loadMovies();
   }
 });
-
 
 export default loadMovies;
