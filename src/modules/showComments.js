@@ -18,7 +18,7 @@ export const showComments = (appId, itemId) => {
       });
     })
     .catch((error) => {
-      console.error(error);
+      throw new Error(error);
     });
 };
 
