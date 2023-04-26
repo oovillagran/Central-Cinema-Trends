@@ -1,38 +1,27 @@
 import countElementsOnPage from "./countElements.js";
 
-describe('countElementsOnPage function', () => {
+describe('Count movies on Page Test', () => {
   beforeEach(() => {
     document.body.innerHTML = `
-      <div id="test1" class="test-class"></div>
-      <div id="test2" class="test-class"></div>
-      <div id="test3" class="test-class"></div>
-      <div id="test4" class="test-class"></div>
+      <div class="movie">Movie1</div>
+      <div class="movie">Movie2</div>
+      <div class="movie">Movie3</div>
+      <div class="movie">Movie4</div>
     `;
   });
 
-  test('Should return the correct number of elements given a class name', () => {
-    const count = countElementsOnPage('.test-class');
-    expect(count).toBe(4);
+  test('Should update the number of movies shown on Homepage', () => {
+    const moviesCountElement = document.createElement('span');
+    moviesCountElement.setAttribute('id', 'movies-count');
+    document.body.appendChild(moviesCountElement);
+
+    countElementsOnPage();
+
+    expect(moviesCountElement.textContent).toBe('(4)');
   });
 
-  test('Should return 0 when no elements with the given class name are found', () => {
-    const count = countElementsOnPage('.another-class');
-    expect(count).toBe(0);
+  test('Should return undefined when there are no movies on Homepage', () => {
+    const result = countElementsOnPage();
+    expect(result).toBeUndefined();
   });
-
-  test('Should return the correct number of elements given an element id', () => {
-    const count = countElementsOnPage('#test1');
-    expect(count).toBe(1);
-  });
-
-  test('Should return 0 when no elements with the given id are found', () => {
-    const count = countElementsOnPage('#another-id');
-    expect(count).toBe(0);
-  });
-
-  test('Should return 0 when given id an invalid selector', () => {
-    const count = countElementsOnPage('invalid-selector');
-    expect(count).toBe(0);
-  });
-
-})
+});
