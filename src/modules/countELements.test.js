@@ -1,4 +1,4 @@
-import countElementsOnPage from "./countElements.js";
+import countElementsOnPage from './countElements.js';
 
 describe('Count movies on Page Test', () => {
   beforeEach(() => {
