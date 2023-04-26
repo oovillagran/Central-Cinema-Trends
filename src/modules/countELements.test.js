@@ -1,4 +1,4 @@
-import countElementsOnPage from "./countElements";
+import countElementsOnPage from "./countElements.js";
 
 describe('countElementsOnPage function', () => {
   beforeEach(() => {
