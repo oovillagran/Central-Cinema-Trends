@@ -9,9 +9,8 @@ const countElementsOnPage = async () => {
     countElements.textContent = `(${moviesCount})`;
 
   } catch(error) {
-    console.log(error);
+    throw new Error(error);
   }
-  
 }
 
 export default countElementsOnPage;
