@@ -28,12 +28,8 @@ module.exports = {
         use: ['html-loader'],
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
-        loader: 'file-loader',
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
-        generator: {
-          filename: 'Images/[name][ext]',
-        },
       },
     ],
   },
