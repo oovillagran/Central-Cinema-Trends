@@ -1,4 +1,6 @@
 import { displayMovieDetails } from './displayMovies.js';
+import countLikes from './countLikes.js';
+import updateLikesCount from './updateLikesCount.js';
 
 let page = 1;
 
@@ -14,11 +16,15 @@ const loadMovies = () => new Promise((resolve, reject) => {
       let movies = '';
       data.results.forEach((movie) => {
         const commentsButton = `<button class="comments-button" data-movie-id="${movie.id}">Comments</button>`;
+        const likeButton = `<i class="bi bi-heart-fill like" data-movie-id="${movie.id}"></i>`;
+        const likeCount = `<span class="count-likes" data-movie-id="${movie.id}">(0)</span>`;
         movies += `
           <div class="movie">
             <img class="poster" src="https://image.tmdb.org/t/p/w500/${movie.poster_path}">    
-            <h4 class="title">${movie.title}</h4>
+            <h6 class="title">${movie.title}</h6>
             ${commentsButton}
+            ${likeButton}
+            ${likeCount}
           </div>
         `;
       });
@@ -30,6 +36,16 @@ const loadMovies = () => new Promise((resolve, reject) => {
           displayMovieDetails(movieId);
         });
       });
+
+      const likeButtons = document.querySelectorAll('.like');
+      likeButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          const itemId = button.dataset.movieId;
+          countLikes(itemId);
+        });
+      });
+
+      updateLikesCount();
 
       resolve();
     })
