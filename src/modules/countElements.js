@@ -3,6 +3,6 @@ const countElementsOnPage = () => {
   const count = movieElements.length;
   const moviesCountElement = document.getElementById('movies-count');
   moviesCountElement.textContent = `(${count})`;
-}
+};
 
 export default countElementsOnPage;
