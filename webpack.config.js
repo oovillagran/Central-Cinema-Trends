@@ -32,7 +32,7 @@ module.exports = {
         loader: 'file-loader',
         type: 'asset/resource',
         generator: {
-          filename: 'Images/[name][ext]'
+          filename: 'Images/[name][ext]',
         },
       },
     ],
