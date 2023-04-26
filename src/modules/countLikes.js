@@ -7,16 +7,15 @@ const countLikes = (itemId) => {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({ item_id: itemId }),
-    })
-    .then(response => {
-      if(response.status === 201) {
+  })
+    .then((response) => {
+      if (response.status === 201) {
         return fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Qp9S5HEfXuHClmKBYUwG/likes');
       }
       throw new Error('Failed to count likes');
     })
-    .then((response) => response.json())
-    .then((data) => {
-
+    .then((response) => {
+      response.json();
       updateLikesCount();
     })
     .catch((error) => {
