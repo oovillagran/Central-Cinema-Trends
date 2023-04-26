@@ -2,7 +2,6 @@ const updateLikesCount = () => {
   fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Qp9S5HEfXuHClmKBYUwG/likes`)
     .then((response) => response.json())
     .then((likes) => {
-      console.log(likes);
       if (likes.length > 0) {
         const likeCounts = {};
         likes.forEach((like) => {
