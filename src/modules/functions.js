@@ -1,6 +1,7 @@
 import { displayMovieDetails } from './displayMovies.js';
 import countLikes from './countLikes.js';
 import updateLikesCount from './updateLikesCount.js';
+import countElementsOnPage from './countElements.js';
 
 let page = 1;
 
@@ -46,7 +47,7 @@ const loadMovies = () => new Promise((resolve, reject) => {
       });
 
       updateLikesCount();
-
+      countElementsOnPage();
       resolve();
     })
     .catch((error) => {

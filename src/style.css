@@ -218,3 +218,7 @@ footer {
   color: #f00;
   font-size: 1.5rem;
 }
+
+.movies-number {
+  gap: 1rem;
+}
