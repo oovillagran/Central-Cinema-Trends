@@ -97,6 +97,7 @@ In this web application, users can interact whit it, posting comments and given 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 - Available soon.
+- Here is a [video](https://drive.google.com/file/d/1UMheuoNDptDJuiILqZK88ZOEy38p4MSx/view?usp=sharing) with the main features of the project we built.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
