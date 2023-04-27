@@ -36,10 +36,12 @@ export const displayMovieDetails = (movieId) => {
           </div>
         `;
       document.body.insertAdjacentHTML('beforeend', popup);
+      const body = document.querySelector('.body');
       const closeButton = document.querySelector('.popup .close-button');
       closeButton.addEventListener('click', () => {
         overlay.remove();
         document.querySelector('.popup').remove();
+        body.style.overflow = 'scroll';
       });
       updateCommentCount(appId, movieId);
       const addButton = document.querySelector('.comment-form button[type="submit"]');
