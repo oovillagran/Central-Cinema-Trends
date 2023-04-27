@@ -24,13 +24,13 @@ export const displayMovieDetails = (movieId) => {
             <p>${data.overview}</p>
             <p>Release date: ${data.release_date}</p>
             <div class="comments-section">
-              <h3 class="comments_header">Comments:</h3>
+            <h3 class="comment_list_header">Comments <span class="comment-count">(0)</span>:</h3>
               <ul class="comments-list"></ul>
-              <h3>Comments <span class="comment-count">(0)</span>:</h3>
+              <h3 class="comments_header">Add Comment:</h3>
               <form class="comment-form">
                 <input type="text" id="username-input" name="username" placeholder="Your name">
                 <textarea id="comment-input" name="comment" placeholder="Your insights"></textarea>
-                <button type="submit">Comment</button>
+                <button class="comment-form_button"type="submit">Comment</button>
               </form>
             </div>
           </div>
@@ -57,17 +57,19 @@ export const displayMovieDetails = (movieId) => {
 
         if (username && comment) {
           addComment(appId, itemId, username, comment);
+          updateCommentCount(appId, movieId);
           const commentsList = document.querySelector('.comments-list');
           const commentItem = `<li><small>${currentDate} - ${username}:</small> <strong>${comment}</strong></li>`;
           commentsList.insertAdjacentHTML('beforeend', commentItem);
           usernameInput.value = '';
           commentInput.value = '';
+          updateCommentCount(appId, movieId);
         }
       });
       showComments(appId, data.id);
     })
     .catch((error) => {
-      console.error(error);
+      throw new Error(error);
     });
 };
 
