@@ -23,9 +23,13 @@ const loadMovies = () => new Promise((resolve, reject) => {
           <div class="movie">
             <img class="poster" src="https://image.tmdb.org/t/p/w500/${movie.poster_path}">    
             <h6 class="title">${movie.title}</h6>
-            ${commentsButton}
-            ${likeButton}
-            ${likeCount}
+            <div class="flex-column">
+              ${commentsButton}
+              <div class="flex like-section">
+                ${likeButton}
+                ${likeCount}
+              </div>
+            </div>
           </div>
         `;
       });
