@@ -3,6 +3,7 @@
   padding: 0;
   font-size: 16px;
   font-family: 'Rowdies', cursive;
+  box-sizing: border-box;
 }
 
 .logo-img {
@@ -85,6 +86,15 @@ footer {
   margin-bottom: 0.5rem;
   border-radius: 1rem;
   height: 305.2px;
+}
+
+.poster {
+  object-fit: cover;
+  transition: transform 0.2s ease-out;
+}
+
+.poster:hover {
+  transform: scale(1.05);
 }
 
 .pages {
@@ -287,8 +297,14 @@ footer {
     width: 60%;
   }
 
+  .movie {
+    margin: 1rem;
+    padding: 2rem 1rem 10rem;
+  }
+  
   .movies-page .movie .poster {
-    height: 500px;
+    width: 100%;
+    height: 100%;
   }
 
   .movies-page .movie .title {
@@ -297,7 +313,7 @@ footer {
   }
 
   .comments-button {
-    margin-top: 1rem;
+    margin-top: 2rem;
     width: 10rem;
     font-size: 1rem;
   }
