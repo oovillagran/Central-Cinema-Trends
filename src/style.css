@@ -1,7 +1,373 @@
-.hello {
-  color: red;
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: 'Rowdies', cursive;
+  box-sizing: border-box;
+}
+
+.logo-img {
+  width: 15%;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  justify-content: space-around;
+  align-items: center;
+  background: #100a1f;
+}
+
+.logo {
+  align-items: center;
+}
+
+.logo-title {
+  color: #fff;
+  font-size: 1.35rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-  background-color: bisque;
+  margin-bottom: 50px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #100a1f;
+  color: #fff;
+  border-top: black 3px solid;
+  padding: 1.5rem 0 1.5rem 1rem;
+  margin: 0;
+  text-align: center;
+}
+
+.movies-page {
+  width: 90%;
+  max-width: 65rem;
+  margin: 5rem auto 7rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+}
+
+.movie {
+  background-color: #b899b2;
+  border-radius: 1rem;
+}
+
+.title {
+  height: 2rem;
+}
+
+.title:hover {
+  transform: scale(1.05);
+}
+
+.movies-page .movie {
+  text-align: center;
+}
+
+.movies-page .movie .title {
+  font-size: 0.95rem;
+  color: #000;
+  font-weight: 700;
+  transition: transform 0.2s ease-out;
+}
+
+.poster {
+  object-fit: cover;
+  transition: transform 0.2s ease-out;
+}
+
+.poster:hover {
+  transform: scale(1.05);
+}
+
+.movies-page .movie .poster {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  border-radius: 1rem;
+  height: 305.2px;
+}
+
+.pages {
+  bottom: 5rem;
+  background: #1f2667;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.pages button {
+  cursor: pointer;
+  border: none;
+  height: 2rem;
+  width: 10rem;
+  background: #665299;
+  color: #fff;
+  border-radius: 7rem;
+  transition: 0.3s ease all;
+}
+
+.pages button:hover {
+  background: #1a137c;
+}
+
+.pages button:focus {
+  background: #6689d9;
+}
+
+.comments-button {
+  background: #665299;
+  color: #fff;
+  font-size: 0.75rem;
+  border-radius: 7rem;
+  transition: 0.3s ease all;
+  cursor: pointer;
+  border: none;
+  height: 2rem;
+  width: 5rem;
+  margin-top: 10px;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9998;
+  backdrop-filter: blur(7px) brightness(1.5);
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 800px;
+  background: linear-gradient(5deg, rgba(24, 26, 88, 1) 0%, rgba(110, 43, 182, 1) 47%, rgba(24, 12, 87, 1) 100%);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  max-height: 90%;
+  overflow-y: scroll;
+}
+
+.popup h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.popup img {
+  width: 100%;
+  max-height: 600px;
+  margin-bottom: 10px;
+}
+
+.popup p {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.popup button.close-button {
+  position: absolute;
+  background: linear-gradient(5deg, rgba(24, 26, 88, 1) 0%, rgba(110, 43, 182, 1) 47%, rgba(24, 12, 87, 1) 100%);
+  top: 10px;
+  right: 10px;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.popup button.close-button:hover {
+  color: #f00;
+}
+
+.comment-form {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.comment-form input {
+  background-color: #b899b2;
+  width: 50%;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  color: #140c0c;
+}
+
+.comment-form textarea {
+  background-color: #b899b2;
+  width: 50%;
+  height: 100px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  color: #140c0c;
+}
+
+.comment-form_button {
+  background: #665299;
+  color: #fff;
+  font-size: 0.75rem;
+  border-radius: 7rem;
+  transition: 0.3s ease all;
+  cursor: pointer;
+  border: none;
+  height: 2rem;
+  width: 5rem;
+  margin-top: 10px;
+}
+
+.comments_header {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #140c0c;
+}
+
+.add_comment_header {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.comment_list_header {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #140c0c;
+}
+
+.comments-list {
+  max-height: 200px;
+  overflow: auto;
+  color: #fff;
+}
+
+.comments-list li {
+  list-style: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 7px;
+}
+
+.like {
+  color: #f00;
+  font-size: 1rem;
+}
+
+.like:hover {
+  cursor: pointer;
+}
+
+.movies-number {
+  gap: 1rem;
+  color: #fff;
+}
+
+.movies-count {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.hero {
+  background: linear-gradient(5deg, rgba(24, 26, 88, 1) 0%, rgba(110, 43, 182, 1) 47%, rgba(24, 12, 87, 1) 100%);
+  padding-bottom: 0.5rem;
+}
+
+.like-section {
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+.count-likes {
+  font-size: 0.75rem;
+  color: #fff;
+}
+
+@media only screen and (max-width: 1000px) {
+  .movies-page {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .movies-page {
+    grid-template-columns: repeat(1, 1fr);
+    width: 60%;
+  }
+
+  .movie {
+    margin: 1rem;
+    padding: 2rem 1rem 10rem;
+  }
+
+  .movies-page .movie .poster {
+    width: 100%;
+    height: 100%;
+  }
+
+  .movies-page .movie .title {
+    font-size: 1.25rem;
+    padding-bottom: 1rem;
+  }
+
+  .comments-button {
+    margin-top: 2rem;
+    width: 10rem;
+    font-size: 1rem;
+  }
+
+  .like {
+    font-size: 2rem;
+  }
+
+  .count-likes {
+    font-size: 1rem;
+  }
 }

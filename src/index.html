@@ -1,11 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wbpack Exercise</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Central Cinema</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
 </head>
-<body>
-    <h1>Hello webpack!</h1>
+<body class="body">
+  <header class="header flex">
+    <div class="logo flex">
+      <a href="#" class="logo-title">Central Cinema Trends</a>
+      <img class="logo-img" src="./Images/movie-icon.png" alt="Movie Icon">
+    </div>
+    <div class="flex movies-number">
+      <p class="movies-count">Movies:</p>
+      <span class="movies-count" id="movies-count">(0)</span>
+    </div>
+  </header>
+  
+  <main class="hero">
+    <div class="pages flex">
+      <button id="previous">Previous</button>
+      <button id="next">Next</button>
+    </div>
+
+    <div class="movies-page" id="movies-page">
+
+    </div>
+
+    
+
+  </main>
+  
+  <footer>
+      <p>Created by Oscar Villagran and Naan Mohammed under the MIT License</p>
+  </footer>
+  
 </body>
 </html>

@@ -1,15 +1,8 @@
-import _ from 'lodash';
+import 'lodash';
 import './style.css';
+import loadMovies from './modules/functions.js';
+import countElementsOnPage from './modules/countElements.js';
 
-function component() {
-  const element = document.createElement('div');
-
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-
-  element.classList.add('hello');
-
-  return element;
-}
-
-document.body.appendChild(component());
+loadMovies().then(() => {
+  countElementsOnPage();
+});
