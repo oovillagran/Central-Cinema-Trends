@@ -371,3 +371,33 @@ footer {
     font-size: 1rem;
   }
 }
+
+@media only screen and (max-width: 400px) {
+  .logo-title {
+    display: none;
+  }
+
+  .movies-page {
+    width: 90%;
+  }
+
+  .movies-page .movie {
+    width: 100%;
+    margin: 0;
+    padding: 0 0 10rem;
+  }
+
+  .popup {
+    width: 90%;
+  }
+
+  input::placeholder {
+    color: #000;
+    font-weight: 600;
+  }
+
+  textarea::placeholder {
+    color: #000;
+    font-weight: 600;
+  }
+}
