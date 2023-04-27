@@ -393,11 +393,11 @@ footer {
 
   input::placeholder {
     color: #000;
-    font-weight: 600;
+    font-weight: 500;
   }
 
   textarea::placeholder {
     color: #000;
-    font-weight: 600;
+    font-weight: 500;
   }
 }
