@@ -1,4 +1,4 @@
-import { updateCommentCount } from './updateCommentCount.js';
+import { updateCommentCount } from '../modules/updateCommentCount.js';
 
 describe('updateCommentCount', () => {
   beforeEach(() => {
