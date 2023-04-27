@@ -70,6 +70,11 @@ footer {
   gap: 2.5rem;
 }
 
+.movie {
+  background-color: #b899b2;
+  border-radius: 1rem;
+}
+
 .movies-page .movie {
   text-align: center;
 }
@@ -81,11 +86,9 @@ footer {
   text-decoration: underline;
 }
 
-.movies-page .movie .poster {
-  width: 100%;
-  margin-bottom: 0.5rem;
-  border-radius: 1rem;
-  height: 305.2px;
+
+.title {
+  height: 2rem;
 }
 
 .poster {
@@ -95,6 +98,13 @@ footer {
 
 .poster:hover {
   transform: scale(1.05);
+}
+
+.movies-page .movie .poster {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  border-radius: 1rem;
+  height: 305.2px;
 }
 
 .pages {
@@ -265,15 +275,6 @@ footer {
   padding-bottom: 0.5rem;
 }
 
-.title {
-  height: 2rem;
-}
-
-.movie {
-  background-color: #b899b2;
-  border-radius: 1rem;
-}
-
 .like-section {
   align-items: center;
   gap: 0.5rem;
@@ -301,7 +302,7 @@ footer {
     margin: 1rem;
     padding: 2rem 1rem 10rem;
   }
-  
+
   .movies-page .movie .poster {
     width: 100%;
     height: 100%;
