@@ -75,6 +75,10 @@ footer {
   border-radius: 1rem;
 }
 
+.title {
+  height: 2rem;
+}
+
 .movies-page .movie {
   text-align: center;
 }
@@ -84,11 +88,6 @@ footer {
   color: #fff;
   font-weight: 300;
   text-decoration: underline;
-}
-
-
-.title {
-  height: 2rem;
 }
 
 .poster {
