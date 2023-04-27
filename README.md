@@ -13,7 +13,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Project Review (Trials)](#-project-review-trials)
+- [📖 Central Cinema Trends - JavaScript capstone project - Your API-based webapp](#-central-cinema-trends---javascript-capstone-project---your-api-based-webapp)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -34,10 +34,13 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Project Review (Trials)<a name="about-project"></a>
+# 📖 Central Cinema Trends - JavaScript capstone project - Your API-based webapp<a name="about-project"></a>
 
 
-**Project Review (Trials)** intends to execute my first code review, as in week number one from Microverse software developer program I upgraded my knowledge and skills in *HTML* and *CSS*. This code review is going to be performance about the **Built a Survey Form project** from trials done in the admission proccess.
+**Central Cinema Trends** is a webapp that shows you the most popular movies. We built this webapp as part of our currently studies at Microverse in the Full-Stack Web Development program. This is our JavaScript capstone project. To Build this web application we use an external API provided by [The Movie DB](https://www.themoviedb.org/). 
+
+In this web application, users can interact whit it, posting comments and given likes for each movie. To do that, we use the [Involvement API](https://www.notion.so/microverse/Involvement-API-869e60b5ad104603aa6db59e08150270) provided by Microverse.
+
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -58,15 +61,34 @@
   </ul>
 </details>
 
+<details>
+  <summary>Javascript</summary>
+  <ul>
+    <li>Javascript</li>
+  </ul>
+</details>
+
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
-
-- Creating branches on repositories.
-- Use of linter on HTML&CSS project.
+- Use of linters on HTML&CSS&JavaScript project.
 - Write a correct descriptive README file.
-- Perform a code review in a HTML and CSS project.
+- Use of webpack.
+- Follow GitFlow.
+- Use of JavaScript to make websites dynamic and build basic single page apps.
+- Use of ES6 syntax.
+- Use of ES6 modules.
+- Use of callbacks and promises.
+- Apply JavaScript best practices and language style guides in code.
+- Use AAA pattern for unit tests.
+- Write units tests for a JavaScript app, and use of Jest tool for these tests..
+- Solve simple git conflicts.
+- Send and receive data from an API.
+- Use API documentation.
+- Understand and use JSON.
+- Make JavaScript code asynchronous.
+- Perform a code review for a team member.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -74,8 +96,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-
-- N/A
+- Available soon.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -83,7 +104,12 @@
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-To get a local copy up and running, follow these steps.
+To get a local copy up and running, follow these steps:
+
+ ```bash
+ clone this repository into your machine
+ npm start
+```
 
 ### Prerequisites
 
@@ -94,14 +120,13 @@ In order to run this project you need:
 - Follow GitHub flow.
 - A carefully reading of this README.md is required.
 
-
 ### Setup
 
 Clone this repository to your desired folder:
  
  ```bash
  cd my-folder
- git clone git@github.com:oovillagran/Portfolio-project.git
+ git clone git@github.com:oovillagran/Capstone-Module2.git
 ```
 
 ### Install
@@ -122,7 +147,7 @@ To run the project, you can use your favorite browser.
 To run tests, execute the following command:
 
 ```bash
- npx hint .
+ npm test
 ```
 
 ### Deployment
@@ -135,6 +160,11 @@ To run tests, execute the following command:
 
 ## 👥 Authors <a name="authors"></a>
 
+👤 **Naan Ahmed Mohammed**
+
+- GitHub: [@naanmohammed](https://github.com/naanmohammed)
+- Twitter: [@_naanahmed](https://twitter.com/twitterhandle)
+- LinkedIn: [naanahmed](https://linkedin.com/in/naanahmed)
 
 👤 **Oscar Villagran**
 
@@ -150,11 +180,8 @@ To run tests, execute the following command:
 ## 🔭 Future Features <a name="future-features"></a>
 
 
+- [ ] **Make Reservations Options**
 
-- [ ] **Use of linter in HTML&CSS projects**
-- [ ] **Use README template file**
-- [ ] **Ask for a code review**
-- [ ] **Follow the list from the article ["How_to_give_a_code_review?"](https://github.com/microverseinc/curriculum-transversal-skills/blob/main/code-review/articles/give_code_review_basics.md).**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -181,7 +208,7 @@ If you like this project feel free to make any comment, all contributions are we
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse comunity, especially reviewers guys, they do an excellent job. I thank my learning, morning session and standup partners for supporting me.
+We would like to thank Microverse comunity. We thank our learning, morning session and standup partners for supporting us.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -189,6 +216,6 @@ I would like to thank Microverse comunity, especially reviewers guys, they do an
 
 This project is [MIT](LICENSE.md) licensed.
 
-_NOTE: we recommend using the [MIT license]<a href="LICENSE.md">
+<a href="LICENSE.md">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
