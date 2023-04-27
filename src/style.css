@@ -59,6 +59,7 @@ footer {
   border-top: black 3px solid;
   padding: 1.5rem 0 1.5rem 1rem;
   margin: 0;
+  text-align: center;
 }
 
 .movies-page {
@@ -79,15 +80,19 @@ footer {
   height: 2rem;
 }
 
+.title:hover {
+  transform: scale(1.05);
+}
+
 .movies-page .movie {
   text-align: center;
 }
 
 .movies-page .movie .title {
-  font-size: 0.9rem;
-  color: #fff;
-  font-weight: 300;
-  text-decoration: underline;
+  font-size: 0.95rem;
+  color: #000;
+  font-weight: 700;
+  transition: transform 0.2s ease-out;
 }
 
 .poster {
@@ -164,7 +169,7 @@ footer {
   transform: translate(-50%, -50%);
   width: 80%;
   max-width: 800px;
-  background-color: #fff;
+  background: linear-gradient(5deg, rgba(24, 26, 88, 1) 0%, rgba(110, 43, 182, 1) 47%, rgba(24, 12, 87, 1) 100%);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
@@ -190,13 +195,16 @@ footer {
 
 .popup button.close-button {
   position: absolute;
+  background: linear-gradient(5deg, rgba(24, 26, 88, 1) 0%, rgba(110, 43, 182, 1) 47%, rgba(24, 12, 87, 1) 100%);
   top: 10px;
   right: 10px;
-  background-color: #fff;
   border: none;
   font-size: 20px;
   font-weight: bold;
   cursor: pointer;
+  color: white;
+  margin-top: 10px;
+  margin-right: 10px;
 }
 
 .popup button.close-button:hover {
@@ -212,7 +220,8 @@ footer {
 }
 
 .comment-form input {
-  width: 30%;
+  background-color: #b899b2;
+  width: 50%;
   height: 30px;
   border-radius: 5px;
   border: 1px solid #ccc;
@@ -220,11 +229,25 @@ footer {
 }
 
 .comment-form textarea {
-  width: 30%;
+  background-color: #b899b2;
+  width: 50%;
   height: 100px;
   border-radius: 5px;
   border: 1px solid #ccc;
   padding: 5px;
+}
+
+.comment-form_button {
+  background: #665299;
+  color: #fff;
+  font-size: 0.75rem;
+  border-radius: 7rem;
+  transition: 0.3s ease all;
+  cursor: pointer;
+  border: none;
+  height: 2rem;
+  width: 5rem;
+  margin-top: 10px;
 }
 
 .comments_header {
@@ -235,6 +258,13 @@ footer {
 }
 
 .add_comment_header {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.comment_list_header {
   text-align: center;
   font-size: 20px;
   font-weight: bold;
@@ -257,6 +287,10 @@ footer {
 .like {
   color: #f00;
   font-size: 1rem;
+}
+
+.like:hover {
+  cursor: pointer;
 }
 
 .movies-number {
