@@ -160,6 +160,7 @@ footer {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 9998;
+  backdrop-filter: blur(7px) brightness(1.5);
 }
 
 .popup {
@@ -174,23 +175,27 @@ footer {
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   z-index: 9999;
+  max-height: 90%;
+  overflow-y: scroll;
 }
 
 .popup h2 {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 10px;
+  color: #fff;
 }
 
 .popup img {
   width: 100%;
-  max-height: 300px;
+  max-height: 600px;
   margin-bottom: 10px;
 }
 
 .popup p {
   font-size: 18px;
   margin-bottom: 10px;
+  color: #fff;
 }
 
 .popup button.close-button {
@@ -226,6 +231,7 @@ footer {
   border-radius: 5px;
   border: 1px solid #ccc;
   padding: 5px;
+  color: #140c0c;
 }
 
 .comment-form textarea {
@@ -235,6 +241,7 @@ footer {
   border-radius: 5px;
   border: 1px solid #ccc;
   padding: 5px;
+  color: #140c0c;
 }
 
 .comment-form_button {
@@ -255,6 +262,7 @@ footer {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 10px;
+  color: #140c0c;
 }
 
 .add_comment_header {
@@ -262,6 +270,7 @@ footer {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 10px;
+  color: #fff;
 }
 
 .comment_list_header {
@@ -269,11 +278,13 @@ footer {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 10px;
+  color: #140c0c;
 }
 
 .comments-list {
   max-height: 200px;
   overflow: auto;
+  color: #fff;
 }
 
 .comments-list li {
