@@ -9,7 +9,7 @@ export const updateCommentCount = (appId, itemId) => {
       }
     })
     .catch((error) => {
-      console.error(error);
+      throw new Error(error);
     });
 };
 export default updateCommentCount;

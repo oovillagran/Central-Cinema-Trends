@@ -10,14 +10,12 @@ export const addComment = (appId, itemId, username, comment) => {
   })
     .then((response) => {
       if (response.status === 201) {
-        console.log(itemId);
-        console.log('Comment added successfully.');
-      } else {
-        throw new Error('Failed to add comment.');
+        return 'Comment added successfully.';
       }
+      throw new Error('Failed to add comment.');
     })
     .catch((error) => {
-      console.error(error);
+      throw new Error(error);
     });
 };
 
