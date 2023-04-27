@@ -34,9 +34,11 @@ const loadMovies = () => new Promise((resolve, reject) => {
         `;
       });
       document.getElementById('movies-page').innerHTML = movies;
+      const body = document.querySelector('.body');
       const commentsButtons = document.querySelectorAll('.comments-button');
       commentsButtons.forEach((button) => {
         button.addEventListener('click', () => {
+          body.style.overflow = 'hidden';
           const { movieId } = button.dataset;
           displayMovieDetails(movieId);
         });
