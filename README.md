@@ -96,7 +96,7 @@ In this web application, users can interact whit it, posting comments and given 
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- Here is a [livedemo](https://oovillagran.github.io/Capstone-Module2/dist/index.html).
+- Here is a [livedemo](https://centralcinematrends.onrender.com/).
 - Here is a [video](https://drive.google.com/file/d/1UMheuoNDptDJuiILqZK88ZOEy38p4MSx/view?usp=sharing) with the main features of the project we built.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
